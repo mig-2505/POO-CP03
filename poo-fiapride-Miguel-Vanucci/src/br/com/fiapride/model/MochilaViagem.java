@@ -1,6 +1,6 @@
 package br.com.fiapride.model;
 
-public class MochilaViagem extends Mochila{
+public abstract class MochilaViagem extends Mochila{
 
     private boolean isCompartimentoTenis;
 

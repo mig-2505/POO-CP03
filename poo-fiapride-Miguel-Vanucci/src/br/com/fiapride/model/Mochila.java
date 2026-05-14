@@ -1,6 +1,6 @@
 package br.com.fiapride.model;
 
-public class Mochila {
+public abstract class Mochila {
 
     private int tamanho;
     private String material;
@@ -78,23 +78,23 @@ public class Mochila {
     public void abrirMochila(boolean aberto) {
         if (aberto) {
             System.out.println("Abrindo mochila");
-            return;
         }
-        if(!aberto) {
+        else {
+
             System.out.println("Não abrindo mochila");
-            return;
         }
+        return;
     }
 
     public void fecharMochila(boolean fechado) {
         if (fechado) {
             System.out.println("Fechando mochila");
-            return;
         }
-        if(fechado == false) {
+        else  {
+
             System.out.println("Não fechando mochila");
-            return;
         }
+        return;
     }
 
     public void mostrarItem() {
@@ -105,9 +105,8 @@ public class Mochila {
         }
     }
 
-    public void mostrarModelo(){
-        System.out.println("Modelo: Mochila generica");
-    }
+    public abstract void mostrarModelo();
+
     public void mostrarUsos(){
         System.out.println("Mochila generica: Guardar todos tipos de objetos");
     }
