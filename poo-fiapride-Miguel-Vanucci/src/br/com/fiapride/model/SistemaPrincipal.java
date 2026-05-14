@@ -4,21 +4,15 @@ public class SistemaPrincipal {
 
     public static void main(String[] args) {
 
-        Mochila mochila1 = new Mochila("Nylon", true, false);
+        Mochila mochila1 = new Mochila("Nylon", 5, 5, true, false);
 
-        mochila1.peso = 5;
-        mochila1.tamanho = 5;
-
-        Mochila mochila2 = new Mochila("Couro", false, true);
-
-        mochila2.peso = 3;
-        mochila2.tamanho = 2;
+        Mochila mochila2 = new Mochila("Couro", 2, 3, false, true);
 
         System.out.println("==== Mochilas ====\n");
 
-        System.out.println("Minha mochila é feita de " + mochila1.material);
-        System.out.println("Minha mochila pesa " + mochila1.peso + " Kilos");
-        System.out.println("Minha mochila tem " + mochila1.tamanho + " metros\n");
+        System.out.println("Minha mochila é feita de " + mochila1.getMaterial());
+        System.out.println("Minha mochila pesa " + mochila1.getPeso() + " Kilos");
+        System.out.println("Minha mochila tem " + mochila1.getTamanho() + " metros\n");
 
         System.out.println("Abrindo mochila 1");
         mochila1.abrirMochila(true);
@@ -27,9 +21,9 @@ public class SistemaPrincipal {
 
         System.out.println();
 
-        System.out.println("Minha mochila é feita de " + mochila2.material);
-        System.out.println("Minha mochila pesa " + mochila2.peso + " Kilos");
-        System.out.println("Minha mochila tem " + mochila2.tamanho + " metros\n");
+        System.out.println("Minha mochila é feita de " + mochila2.getMaterial());
+        System.out.println("Minha mochila pesa " + mochila2.getPeso() + " Kilos");
+        System.out.println("Minha mochila tem " + mochila2.getTamanho() + " metros\n");
 
         System.out.println("Abrindo mochila 2");
         mochila2.abrirMochila(false);
