@@ -1,0 +1,29 @@
+package br.com.fiapride.model;
+
+public class MochilaViagem extends Mochila{
+
+    private boolean isCompartimentoTenis;
+
+    public MochilaViagem(String material, int tamanho, double peso, Itens item) {
+        super(material, tamanho, peso, item);
+    }
+
+    public void VerificarCompartimento(boolean isCompartimentoTenis){
+        if (isCompartimentoTenis){
+            System.out.println("É possivel colocar o tenis, a mochila tem o compartimento!");
+        }
+        else {
+            System.out.println("Não é possivel colocar o tenis, a mochila não tem o compartimento!");
+        }
+    }
+
+    @Override
+    public void mostrarModelo() {
+        System.out.println("Modelo: Mochila para Viagem");
+    }
+
+    @Override
+    public void mostrarUsos() {
+        System.out.println("Mochila de Viagem: Guardar roupas, tenis, comidas, etc");
+    }
+}
