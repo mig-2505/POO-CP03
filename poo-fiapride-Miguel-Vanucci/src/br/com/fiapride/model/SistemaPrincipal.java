@@ -1,7 +1,5 @@
 package br.com.fiapride.model;
 
-import java.util.ArrayList;
-
 public class SistemaPrincipal {
 
     public static void main(String[] args) {
@@ -34,6 +32,25 @@ public class SistemaPrincipal {
         System.out.println("Fechando mochila 1");
         mochila1.fecharMochila(true);
 
+        System.out.println();
+
+        System.out.println("Minha mochila é feita de " + mochila2.getMaterial());
+        System.out.println("Minha mochila pesa " + mochila2.getPeso() + " Kilos");
+        System.out.println("Minha mochila tem " + mochila2.getTamanho() + " metros\n");
+        item2.exibirResumo();
+
+        System.out.println("Abrindo mochila 2");
+        mochila2.abrirMochila(false);
+        System.out.println("Fechando mochila 2");
+        mochila2.fecharMochila(false);
+
+        System.out.println();
+
+        System.out.println("Minha mochila é feita de " + mochila3.getMaterial());
+        System.out.println("Minha mochila pesa " + mochila3.getPeso() + " Kilos");
+        System.out.println("Minha mochila tem " + mochila3.getTamanho() + " metros\n");
+        item3.exibirResumo();
+
         System.out.println("==== Tipos de Mochilas ====\n");
         System.out.println("Minha mochila é feita de " + mochilaViagem1.getMaterial());
         System.out.println("Minha mochila pesa " + mochilaViagem1.getPeso() + " Kilos");
@@ -41,18 +58,22 @@ public class SistemaPrincipal {
         item4.exibirResumo();
         mochilaViagem1.VerificarCompartimento(true);
 
-        // Listas
-        ArrayList<Mochila> listaMochilas = new ArrayList<>();
-        listaMochilas.add(mochila1);
-        listaMochilas.add(mochilaViagem1);
-        listaMochilas.add(mochilaEsportiva1);
+        System.out.println();
 
-        for (Mochila mochilas : listaMochilas){
-            mochilas.mostrarModelo();
-            mochilas.mostrarUsos();
-            mochilas.mostrarItem();
-            System.out.println("---------------------------------------");
+        System.out.println("Minha mochila é feita de " + mochilaViagem2.getMaterial());
+        System.out.println("Minha mochila pesa " + mochilaViagem2.getPeso() + " Kilos");
+        System.out.println("Minha mochila tem " + mochilaViagem2.getTamanho() + " metros\n");
+        item5.exibirResumo();
+        mochilaViagem2.VerificarCompartimento(true);
 
-        }
+        System.out.println();
+
+        System.out.println("Minha mochila é feita de " + mochilaEsportiva1.getMaterial());
+        System.out.println("Minha mochila pesa " + mochilaEsportiva1.getPeso() + " Kilos");
+        System.out.println("Minha mochila tem " + mochilaEsportiva1.getTamanho() + " metros\n");
+        item6.exibirResumo();
+        mochilaEsportiva1.VerificarCompartimento(true);
+
     }
+
 }
